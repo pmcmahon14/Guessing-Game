@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        var the_number = null;
+        function pick_number() {
+            var random_number = Math.floor(Math.random()*10);
+            return random_number;
+        }
+        var the_number = pick_number();
+        //which input from above?
+
+        function make_guess() {
+            var the_guess = $('#guess_input').val();
+            if (the_guess > the_number) {
+                $("#response_div").text("Too high!");
+            } else if (the_guess < the_number) {
+                $("#response_div").text("Too low!");
+            } else {
+                $("#response_div").text("You guessed it!");
+            }
+        }
+
+        $(document).ready(function() {
+            $('#button').click(make_guess)
+        });
+
+    </script>
+</head>
+<body onload="pick_number()">
+
+Pick a number:<input id="guess_input" type="text"><br>
+<button type="button" id="button">Submit</button>
+<div id="response_div">
+
+</div>
+</body>
+</html>

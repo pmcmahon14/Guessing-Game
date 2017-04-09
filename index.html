@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="Guessing Game">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <!--<meta name="viewport" content="width=device-width">-->
+    <title>Guessing Game</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script>
-        var the_number = null;
-        function pick_number() {
-            var random_number = Math.floor(Math.random()*10);
-            return random_number;
-        }
-        var the_number = pick_number();
-        //which input from above?
-
-        function make_guess() {
-            var the_guess = $('#guess_input').val();
-            if (the_guess > the_number) {
-                $("#response_div").text("Too high!");
-            } else if (the_guess < the_number) {
-                $("#response_div").text("Too low!");
-            } else {
-                $("#response_div").text("You guessed it!");
-            }
-        }
-
-        $(document).ready(function() {
-        $('#button').click(make_guess)
-        });
-
-    </script>
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body onload="pick_number()">
 
-Pick a number:<input id="guess_input" type="text"><br>
-<button type="button" id="button">Submit</button>
-<div id="response_div">
-
-</div>
+<body onload="pickNumber()" id="board">
+    <div class="container">
+        <p>Guesses left: <span id="guessesleft">10</span></p>
+        <p>What's your Guess?</p>
+        <input size="8" type="text" id="guess" autofocus autocomplete="off"><br><br>
+        <audio id="winner">
+            <source src="mp3/boom_confetti.mp3" type="audio/mpeg">
+        </audio>
+        <button type="button" id="startover" onclick="startOver()">Start Over</button>
+        <div id="displaymessage">
+            Good luck!
+        </div>
+        <div id="displayrange">
+            1-100
+        </div>
+        <!--attempt at confetti cannon-->
+        <div class="confetti">
+            <!--<canvas id="celebrate"></canvas>-->
+        </div>
+    </div>
 </body>
 </html>
