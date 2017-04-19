@@ -11,3 +11,5 @@
 
 #####1. Feature for player to choose range and number of guesses would adjust accordingly
 #####2. Change confetti effect so that it shoots out from a cannon just below the screen
+#####3. Add additional celebrations with sounds(e.g. fireworks)
+#####4. Add animated party-type letter
