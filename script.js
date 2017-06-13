@@ -106,34 +106,34 @@ window.onload = changeBackground;
 function changeBackground() {
     switch(count) {
         case 9:
-            document.getElementById('board').style.background = "rgb(50, 255, 0)";
+            $('#board').css("background-color", "rgb(50, 255, 0)");
             break;
         case 8:
-            document.getElementById('board').style.background = "rgb(100, 255, 0)";
+            $('#board').css("background-color", "rgb(100, 255, 0");
             break;
         case 7:
-            document.getElementById('board').style.background = "rgb(150, 255, 0)";
+            $('#board').css("background-color", "rgb(150, 255, 0");
             break;
         case 6:
-            document.getElementById('board').style.background = "rgb(200, 255, 0)";
+            $('#board').css("background-color", "rgb(200, 255, 0");
             break;
         case 5:
-            document.getElementById('board').style.background = "rgb(255, 255, 0)";
+            $('#board').css("background-color", "rgb(255, 255, 0");
             break;
         case 4:
-            document.getElementById('board').style.background = "rgb(255, 200, 0)";
+            $('#board').css("background-color", "rgb(255, 200, 0");
             break;
         case 3:
-            document.getElementById('board').style.background = "rgb(255, 150, 0)";
+            $('#board').css("background-color", "rgb(255, 150, 0");
             break;
         case 2:
-            document.getElementById('board').style.background = "rgb(255, 100, 0)";
+            $('#board').css("background-color", "rgb(255, 100, 0");
             break;
         case 1:
-            document.getElementById('board').style.background = "rgb(255, 50, 0)";
+            $('#board').css("background-color", "rgb(255, 50, 0");
             break;
         case 0:
-            document.getElementById('board').style.background = "rgb(255, 0, 0)";
+            $('#board').css("background-color", "rgb(255, 0, 0");
             break;
     }
 }
